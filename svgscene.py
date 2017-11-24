@@ -37,7 +37,7 @@ class Scene:
         #ET.dump(svg) # useful for debugging
         if fname:
             open(fname,'w').write(ET.tostring(svg))
-        return ET.tostring(svg)
+        return ET.tostring(svg,encoding="unicode")
 
     def line(self,start,end,**kwargs): self.items.append(Line(start,end,**kwargs))
     def circle(self,center,radius,color='blue',linecolor='black'): 
